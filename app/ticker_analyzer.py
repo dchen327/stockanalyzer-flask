@@ -14,7 +14,7 @@ def ticker_analyzer(ticker):
         score, magnitude = analyzer.analyze(title)
         scores.append(score * magnitude)  # interpretation of API output
 
-    return 100 * sum(scores) / len(scores)
+    return f'{100 * sum(scores) / len(scores):.2f}'
 
 
 if __name__ == '__main__':

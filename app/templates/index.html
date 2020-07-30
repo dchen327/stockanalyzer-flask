@@ -4,10 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Stock Analyzer</title>
   </head>
-  <body>
-    <h1 style="text-align: center;"><span style="font-family: Helvetica,Arial,sans-serif;">Stock
-        Analyzer</span></h1>
-    <p> </p>
+  <body>{% extends base.html %}
     <div style="height:800px;width:80%;background-color:powderblue;margin:auto;text-align:center;padding: 10px 40px 10px 40px">
       <br>
       <h3><span style="font-family: Helvetica,Arial,sans-serif;">Welcome to
@@ -18,7 +15,7 @@
       <form method="POST"> <input name="ticker"> <input type="submit"> </form>
       <p> <span style="font-family: Helvetica,Arial,sans-serif;">Sentiment
           Score: </span></p>
-      <span style="font-family: Helvetica,Arial,sans-serif;">{{ ticker }}
+      <span style="font-family: Helvetica,Arial,sans-serif;">{{ score }}
         </span></div>
     <br>
   </body>

@@ -15,10 +15,12 @@
           please enter the desired stock ticker that you would like to analyze<br>
           (For example, use "AAPL" for Apple)</span> </h4>
       <form method="POST"> <input name="ticker"> <input type="submit"> </form>
+      {% if score %}
       <p> <span style="font-family: Helvetica,Arial,sans-serif;">Sentiment
           Score: </span></p>
       <span style="font-family: Helvetica,Arial,sans-serif;">{{ score }}
         </span></div>
+      {% endif %}
     <br>
   </body>
 </html>

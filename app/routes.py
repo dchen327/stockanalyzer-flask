@@ -9,7 +9,7 @@ def index():
     if request.method == 'POST':
         text = request.form['ticker']
         score = ticker_analyzer(text)
-        return render_template('index.html', score=score, ticker = text)
+        return render_template('index.html', score=score, ticker=text)
     else:
         return render_template('index.html')
 

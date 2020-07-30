@@ -6,6 +6,8 @@ def ticker_analyzer(ticker):
     """ Return an average sentiment and magnitude for a given stock ticker """
     title_crawler = TitleCrawler()
     titles = title_crawler.fetch_article_titles(ticker)
+    if titles == []:
+        return f'No articles found for {ticker}'
     analyzer = SentimentAnalyzer()
     scores = []
     for title in titles:

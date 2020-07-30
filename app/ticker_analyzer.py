@@ -1,5 +1,5 @@
-from sentiment_analyzer import SentimentAnalyzer
-from title_crawler import TitleCrawler
+from app.sentiment_analyzer import SentimentAnalyzer
+from app.title_crawler import TitleCrawler
 
 
 def ticker_analyzer(ticker):

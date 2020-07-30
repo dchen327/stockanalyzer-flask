@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 
 
 class TitleCrawler:
+
     def fetch_article_titles(self, ticker):
         """ 
         Given a stock ticker, return a list of article titles from Robinhood.
@@ -15,11 +16,13 @@ class TitleCrawler:
         url = f'https://robinhood.com/stocks/{ticker}'  # url with info
         resp = requests.get(url, timeout=5)
         soup = BeautifulSoup(resp.content, 'lxml')
-        # hardcoded to find article titles specific to RobinHood; uses unique tags
+        # hardcoded to find article titles specific to RobinHood; uses unique
+        # tags
         titles = soup.find_all(
             'h3', class_='_1mENhHqLzNE3Fc8Lm0t1of')
         # sometimes returned article title is None
-        news_titles = [title.text for title in titles if title.text is not None]
+        news_titles = [
+            title.text for title in titles if title.text is not None]
 
         return news_titles
 

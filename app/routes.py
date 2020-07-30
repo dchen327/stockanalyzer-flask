@@ -1,8 +1,14 @@
-from flask import render_template
+from flask import render_template, request
 from app import app
-@app.route('/')
-@app.route('/index')
+@app.route('/',methods=['GET','POST'])
 
+@app.route('/index',methods=['GET','POST'])
 def index():
-    return render_template('index.html')
+    if request.method == 'POST':
+        text = request.form['ticker']
+        return render_template('index.html',ticker=text)
+    else:
+        return render_template('index.html')
+
+    
 

@@ -23,3 +23,5 @@ if __name__ == '__main__':
     analyzer = SentimentAnalyzer()
     print(analyzer.analyze(
         'Truly an amazing experience. I loved the atmosphere and the food.'))
+
+

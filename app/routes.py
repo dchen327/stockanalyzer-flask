@@ -3,6 +3,7 @@ from app import app
 from app.ticker_analyzer import ticker_analyzer
 
 
+@app.route('/')
 @app.route('/index.html')
 def index():
     return render_template('index.html')

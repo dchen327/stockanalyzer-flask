@@ -2,6 +2,7 @@ from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
+
 class SentimentAnalyzer:
 
     def __init__(self):
@@ -13,10 +14,12 @@ class SentimentAnalyzer:
             content=text,
             type=enums.Document.Type.PLAIN_TEXT
         )
-        sentiment = self.client.analyze_sentiment(document=self.document).document_sentiment
+        sentiment = self.client.analyze_sentiment(
+            document=self.document).document_sentiment
         return (sentiment.score, sentiment.magnitude)
 
 
 if __name__ == '__main__':
     analyzer = SentimentAnalyzer()
-    print(analyzer.analyze('Truly an amazing experience. I loved the atmosphere and the food.'))
+    print(analyzer.analyze(
+        'Truly an amazing experience. I loved the atmosphere and the food.'))

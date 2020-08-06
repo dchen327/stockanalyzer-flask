@@ -1,6 +1,6 @@
 """
-The TitleCrawler class provides methods to grab article titles on Robinhood relating to a
-provided stock ticker.
+The TitleCrawler class provides methods to grab article titles on Robinhood
+relating to a provided stock ticker.
 """
 import requests
 from bs4 import BeautifulSoup
@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 class TitleCrawler:
 
     def fetch_article_titles(self, ticker):
-        """ 
+        """
         Given a stock ticker, return a list of article titles from Robinhood.
         Will return an empty list if no articles found (e.g. invalid ticker)
         """
